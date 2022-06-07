@@ -4,6 +4,10 @@
     "module": "esnext",
     "forceConsistentCasingInFileNames": true,
     "outDir": "lib",
+  <<<<<<< version_1_0_0
+  =======
+    "moduleResolution": "Node",
+  >>>>>>> types
     "stripInternal": true
   },
   "include": ["src"]
