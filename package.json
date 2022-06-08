@@ -2,6 +2,11 @@
   "name": "@puppeteer/replay",
   "version": "0.2.0",
   "description": "Replay is a library which provides an API to replay and stringify recordings created using Chrome DevTools Recorder](https://developer.chrome.com/docs/devtools/recorder/)",
+  <<<<<<< version_1_0_0
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "bin": "./lib/cli.js",
+  =======
   "main": "lib/main.js",
   "types": "lib/main.d.ts",
   "bin": "lib/cli.js",
@@ -12,6 +17,7 @@
       "require": "./lib/cjs/main.cjs"
     }
   },
+  >>>>>>> types
   "repository": "github:puppeteer/replay",
   "directories": {
     "doc": "docs"
@@ -24,9 +30,16 @@
     "test:headful": "cross-env PUPPETEER_HEADFUL=true npm run test",
     "test:coverage": "c8 npm run test",
     "eslint": "([ \"$CI\" = true ] && eslint --ext js --ext ts --quiet -f codeframe . || eslint --ext js --ext ts .)",
+  <<<<<<< version_1_0_0
+    "eslint:fix": "eslint --ext js --ext ts --fix .",
+    "clean-lib": "rimraf lib",
+    "build": "npm run tsc",
+    "tsc": "npm run clean-lib && tsc --version && tsc -b tsconfig.json && tsc -b tsconfig.cjs.json && echo '{\"type\":\"commonjs\"}' > lib/cjs/package.json",
+  =======
     "eslint-fix": "eslint --ext js --ext ts --fix .",
     "clean": "rimraf lib",
     "build": "rollup --config rollup.config.ts --configPlugin typescript",
+  >>>>>>> types
     "lint": "npm run eslint",
     "docs": "typedoc --readme none --gitRevision main --externalPattern --excludeExternals --excludeProtected --excludePrivate --plugin typedoc-plugin-markdown --out docs/api src/main.ts",
     "release": "standard-version"

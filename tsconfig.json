@@ -1,14 +1,14 @@
 {
+  "extends": "./tsconfig.base.json",
   "compilerOptions": {
-    "target": "ES2019",
     "module": "esnext",
-    "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "skipLibCheck": false,
     "outDir": "lib",
+  <<<<<<< version_1_0_0
+  =======
     "moduleResolution": "Node",
+  >>>>>>> types
     "stripInternal": true
   },
-  "include": ["src/**/*"]
+  "include": ["src"]
 }
